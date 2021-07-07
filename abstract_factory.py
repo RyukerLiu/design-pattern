@@ -1,13 +1,16 @@
 class Chair:
-    pass
+    def __str__(self):
+        raise NotImplementedError('.__str__() should be overriden.')
 
 
 class CoffeTable:
-    pass
+    def __str__(self):
+        raise NotImplementedError('.__str__() should be overriden.')
 
 
 class Sofa:
-    pass
+    def __str__(self):
+        raise NotImplementedError('.__str__() should be overriden.')
 
 
 class FurnitureFactory:
@@ -23,38 +26,18 @@ class FurnitureFactory:
 
 
 class VictorianChair(Chair):
-    pass
+    def __str__(self):
+        return type(self).__name__
 
 
 class VictorianCoffeTable(CoffeTable):
-    pass
+    def __str__(self):
+        return type(self).__name__
 
 
 class VictorianSofa(Sofa):
-    pass
-
-
-class VictorianFurnitureFactory:
-    def create_chair(self) -> Chair:
-        return VictorianChair()
-
-    def create_coffee_table(self) -> CoffeTable:
-        return VictorianCoffeTable()
-
-    def create_sofa(self) -> Sofa:
-        return VictorianSofa()
-
-
-class VictorianChair(Chair):
-    pass
-
-
-class VictorianCoffeTable(CoffeTable):
-    pass
-
-
-class VictorianSofa(Sofa):
-    pass
+    def __str__(self):
+        return type(self).__name__
 
 
 class VictorianFurnitureFactory:
@@ -69,15 +52,18 @@ class VictorianFurnitureFactory:
 
 
 class ModernChair(Chair):
-    pass
+    def __str__(self):
+        return type(self).__name__
 
 
 class ModernCoffeTable(CoffeTable):
-    pass
+    def __str__(self):
+        return type(self).__name__
 
 
 class ModernSofa(Sofa):
-    pass
+    def __str__(self):
+        return type(self).__name__
 
 
 class ModernFurnitureFactory:
