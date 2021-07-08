@@ -25,3 +25,11 @@ https://refactoring.guru/design-patterns/structural-patterns
 ### Adapter
 
 https://refactoring.guru/design-patterns/adapter
+
+## Behavioral Design Patterns
+
+https://refactoring.guru/design-patterns/behavioral-patterns
+
+### Command
+
+https://refactoring.guru/design-patterns/command
