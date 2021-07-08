@@ -11,3 +11,7 @@ https://refactoring.guru/design-patterns/creational-patterns
 ### Abstract Factory
 
 https://refactoring.guru/design-patterns/abstract-factory
+
+### Singleton
+
+https://refactoring.guru/design-patterns/singleton
