@@ -1,4 +1,4 @@
-from abstract_factory import VictorianFurnitureFactory, ModernFurnitureFactory
+from .abstract_factory import VictorianFurnitureFactory, ModernFurnitureFactory
 
 
 def get_furniture(variant):

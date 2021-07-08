@@ -1,5 +1,5 @@
 import unittest
-from singleton import Singleton, FileSingleton, SingletonV2, FileSingletonV2
+from .singleton import Singleton, FileSingleton, SingletonV2, FileSingletonV2
 
 
 class TestSingleton(unittest.TestCase):

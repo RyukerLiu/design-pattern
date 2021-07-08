@@ -1,5 +1,5 @@
 import unittest
-from abstract_factory_main import get_furniture
+from .abstract_factory_main import get_furniture
 
 
 class TestAbstractFactoryMain(unittest.TestCase):
