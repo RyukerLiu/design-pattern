@@ -10,9 +10,6 @@ class Dialog:
     content = ''
     button = None
 
-    def __init__(self):
-        self.render()
-
     def create_button(self) -> Button:
         raise NotImplementedError
 
@@ -60,6 +57,8 @@ class Application:
             self.dialog = WebDialog()
         else:
             raise Exception(f'os: {os} is not supported')
+
+        self.dialog.render()
 
     def click_button(self):
         self.message = self.dialog.button.on_click()
