@@ -26,6 +26,10 @@ https://refactoring.guru/design-patterns/factory-method
 
 https://refactoring.guru/design-patterns/builder
 
+### Prototype
+
+https://refactoring.guru/design-patterns/prototype
+
 ## Structural Design Patterns
 
 https://refactoring.guru/design-patterns/structural-patterns
