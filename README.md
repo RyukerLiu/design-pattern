@@ -14,7 +14,6 @@ https://refactoring.guru/design-patterns/creational-patterns
 
 https://refactoring.guru/design-patterns/abstract-factory
 
-
 ### Singleton
 
 https://refactoring.guru/design-patterns/singleton
@@ -22,6 +21,10 @@ https://refactoring.guru/design-patterns/singleton
 ### Factory Method
 
 https://refactoring.guru/design-patterns/factory-method
+
+### Builder
+
+https://refactoring.guru/design-patterns/builder
 
 ## Structural Design Patterns
 
