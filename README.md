@@ -54,6 +54,10 @@ https://refactoring.guru/design-patterns/decorator
 
 https://refactoring.guru/design-patterns/facade
 
+### Flyweight
+
+https://refactoring.guru/design-patterns/flyweight
+
 ## Behavioral Design Patterns
 
 https://refactoring.guru/design-patterns/behavioral-patterns
