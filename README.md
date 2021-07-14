@@ -50,6 +50,10 @@ https://refactoring.guru/design-patterns/composite
 
 https://refactoring.guru/design-patterns/decorator
 
+### Facade
+
+https://refactoring.guru/design-patterns/facade
+
 ## Behavioral Design Patterns
 
 https://refactoring.guru/design-patterns/behavioral-patterns
