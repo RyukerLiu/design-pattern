@@ -42,6 +42,10 @@ https://refactoring.guru/design-patterns/adapter
 
 https://refactoring.guru/design-patterns/bridge
 
+### Composite
+
+https://refactoring.guru/design-patterns/composite
+
 ## Behavioral Design Patterns
 
 https://refactoring.guru/design-patterns/behavioral-patterns
