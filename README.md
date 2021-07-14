@@ -38,6 +38,10 @@ https://refactoring.guru/design-patterns/structural-patterns
 
 https://refactoring.guru/design-patterns/adapter
 
+### Bridge
+
+https://refactoring.guru/design-patterns/bridge
+
 ## Behavioral Design Patterns
 
 https://refactoring.guru/design-patterns/behavioral-patterns
