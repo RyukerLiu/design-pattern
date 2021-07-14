@@ -46,6 +46,10 @@ https://refactoring.guru/design-patterns/bridge
 
 https://refactoring.guru/design-patterns/composite
 
+### Decorator
+
+https://refactoring.guru/design-patterns/decorator
+
 ## Behavioral Design Patterns
 
 https://refactoring.guru/design-patterns/behavioral-patterns
