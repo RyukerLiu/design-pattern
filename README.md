@@ -77,3 +77,7 @@ https://refactoring.guru/design-patterns/chain-of-responsibility
 ### Iterator
 
 https://refactoring.guru/design-patterns/iterator
+
+### Strategy
+
+https://refactoring.guru/design-patterns/strategy
