@@ -58,6 +58,10 @@ https://refactoring.guru/design-patterns/facade
 
 https://refactoring.guru/design-patterns/flyweight
 
+### Proxy
+
+https://refactoring.guru/design-patterns/proxy
+
 ## Behavioral Design Patterns
 
 https://refactoring.guru/design-patterns/behavioral-patterns
