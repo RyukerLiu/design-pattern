@@ -73,3 +73,7 @@ https://refactoring.guru/design-patterns/command
 ### Chain of Responsibility
 
 https://refactoring.guru/design-patterns/chain-of-responsibility
+
+### Iterator
+
+https://refactoring.guru/design-patterns/iterator
