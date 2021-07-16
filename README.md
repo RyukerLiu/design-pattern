@@ -97,3 +97,7 @@ https://refactoring.guru/design-patterns/observer
 ### State
 
 https://refactoring.guru/design-patterns/state
+
+### Template Method
+
+https://refactoring.guru/design-patterns/template-method
