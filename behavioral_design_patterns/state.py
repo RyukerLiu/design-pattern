@@ -1,10 +1,10 @@
 class Context:
     def __init__(self, state):
-        self.state = state
-        self.state.set_context(self)
+        self.change_state(state)
 
     def change_state(self, state):
         self.state = state
+        self.state.set_context(self)
 
 
 class Tv(Context):
@@ -27,14 +27,10 @@ class State:
 class OnState(State):
     def push_power_button(self):
         self.context.is_power_on = False
-        state = OffState()
-        state.set_context(self.context)
-        self.context.change_state(state)
+        self.context.change_state(OffState())
 
 
 class OffState(State):
     def push_power_button(self):
         self.context.is_power_on = True
-        state = OnState()
-        state.set_context(self.context)
-        self.context.change_state(state)
+        self.context.change_state(OnState())
