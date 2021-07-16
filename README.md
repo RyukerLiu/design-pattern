@@ -81,3 +81,7 @@ https://refactoring.guru/design-patterns/iterator
 ### Strategy
 
 https://refactoring.guru/design-patterns/strategy
+
+### Mediator
+
+https://refactoring.guru/design-patterns/mediator
