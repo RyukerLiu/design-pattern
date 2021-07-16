@@ -93,3 +93,7 @@ https://refactoring.guru/design-patterns/memento
 ### Observer
 
 https://refactoring.guru/design-patterns/observer
+
+### State
+
+https://refactoring.guru/design-patterns/state
