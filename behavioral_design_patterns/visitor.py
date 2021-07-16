@@ -1,25 +1,19 @@
 class Element:
     def accept(self, visitor):
-        return visitor.visit(type(self))
+        return visitor.visit_element()
 
 
 class ElementA(Element):
-    pass
+    def accept(self, visitor):
+        return visitor.visit_element_a()
 
 
 class ElementB(Element):
-    pass
+    def accept(self, visitor):
+        return visitor.visit_element_b()
 
 
 class Visitor:
-    def visit(self, element_type):
-        if element_type is Element:
-            return self.visit_element()
-        elif element_type is ElementA:
-            return self.visit_element_a()
-        elif element_type is ElementB:
-            return self.visit_element_b()
-
     def visit_element(self):
         return ''
 
