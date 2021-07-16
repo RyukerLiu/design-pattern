@@ -89,3 +89,7 @@ https://refactoring.guru/design-patterns/mediator
 ### Memento
 
 https://refactoring.guru/design-patterns/memento
+
+### Observer
+
+https://refactoring.guru/design-patterns/observer
