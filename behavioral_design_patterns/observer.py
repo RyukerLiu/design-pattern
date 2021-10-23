@@ -11,9 +11,9 @@ class EventManager:
     def unsubscribe(self, event_type, listener):
         self.event_listeners[event_type].remove(listener)
 
-    def notify(self, event_type, data):
+    def notify(self, event_type, filename):
         for listener in self.event_listeners[event_type]:
-            listener.update(data)
+            listener.update(event_type, filename)
 
 
 class Editor:
@@ -28,21 +28,28 @@ class Editor:
 
 
 class EventListener:
-    def update(self, filename):
+    def __init__(self, event_manager):
+        self.event_manager = event_manager
+        event_manager.subscribe('open', self)
+        event_manager.subscribe('save', self)
+
+    def update(self, event_type, filename):
         raise NotImplementedError
 
 
 class LoggingListener(EventListener):
-    def __init__(self):
+    def __init__(self, event_manager):
+        super().__init__(event_manager)
         self.log = ''
 
-    def update(self, filename):
-        self.log = filename
+    def update(self, event_type, filename):
+        self.log = event_type + ' ' + filename
 
 
 class ScreenListener(EventListener):
-    def __init__(self):
+    def __init__(self, event_manager):
+        super().__init__(event_manager)
         self.screen = ''
 
-    def update(self, filename):
-        self.screen = filename
+    def update(self, event_type, filename):
+        self.screen = event_type + ' ' + filename
