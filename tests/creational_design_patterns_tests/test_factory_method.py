@@ -1,5 +1,5 @@
 import unittest
-from .factory_method import Application
+from creational_design_patterns.factory_method import Application
 
 
 class TestApplication(unittest.TestCase):

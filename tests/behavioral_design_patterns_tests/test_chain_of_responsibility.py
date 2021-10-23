@@ -1,5 +1,5 @@
 import unittest
-from .chain_of_responsibility import AdultChecker, ManChecker, Human
+from behavioral_design_patterns.chain_of_responsibility import AdultChecker, ManChecker, Human
 
 
 class TestBridge(unittest.TestCase):

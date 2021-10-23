@@ -1,5 +1,5 @@
 import unittest
-from .memento import Screen, Caretaker
+from behavioral_design_patterns.memento import Screen, Caretaker
 
 
 class TestMemento(unittest.TestCase):

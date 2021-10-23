@@ -1,5 +1,5 @@
 import unittest
-from .flyweight import Canvas, Forest, TreeFactory
+from structural_design_patterns.flyweight import Canvas, Forest, TreeFactory
 
 
 class TestFlyweight(unittest.TestCase):

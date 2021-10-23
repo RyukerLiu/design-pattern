@@ -1,5 +1,5 @@
 import unittest
-from .template_method import HolyStringGenerator, DarkStringGenerator, StringGenerator
+from behavioral_design_patterns.template_method import HolyStringGenerator, DarkStringGenerator, StringGenerator
 
 
 class TestTemplateMethod(unittest.TestCase):

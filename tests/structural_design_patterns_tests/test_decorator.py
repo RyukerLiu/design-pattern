@@ -1,5 +1,5 @@
 import unittest
-from .decorator import DoubleCalculator, BaseDecorator, PutResultInDict, PutResultInList
+from structural_design_patterns.decorator import DoubleCalculator, BaseDecorator, PutResultInDict, PutResultInList
 
 
 class TestComposite(unittest.TestCase):

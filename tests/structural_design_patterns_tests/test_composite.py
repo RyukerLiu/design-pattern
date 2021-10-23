@@ -1,5 +1,5 @@
 import unittest
-from .composite import Product, Box
+from structural_design_patterns.composite import Product, Box
 
 
 class TestComposite(unittest.TestCase):

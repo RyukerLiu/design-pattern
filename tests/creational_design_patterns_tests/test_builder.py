@@ -1,5 +1,5 @@
 import unittest
-from .builder import *
+from creational_design_patterns.builder import *
 
 
 class TestDirector(unittest.TestCase):

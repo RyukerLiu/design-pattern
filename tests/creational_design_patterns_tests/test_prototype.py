@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from .prototype import Person
+from creational_design_patterns.prototype import Person
 
 
 class TestPrototype(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from .state import Tv, OffState, OnState
+from behavioral_design_patterns.state import Tv, OffState, OnState
 
 
 class TestState(unittest.TestCase):

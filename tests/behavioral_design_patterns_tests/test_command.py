@@ -1,5 +1,5 @@
 import unittest
-from .command import EditorApplication
+from behavioral_design_patterns.command import EditorApplication
 
 
 class TestEditorApplication(unittest.TestCase):

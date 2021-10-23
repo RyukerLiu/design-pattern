@@ -1,5 +1,5 @@
 import unittest
-from .visitor import Visitor, ElementB, Element, ElementA
+from behavioral_design_patterns.visitor import Visitor, ElementB, Element, ElementA
 
 
 class TestVisitor(unittest.TestCase):

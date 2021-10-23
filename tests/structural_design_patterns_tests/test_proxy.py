@@ -1,5 +1,5 @@
 import unittest
-from .proxy import VideoProvider, GetVideoProxy
+from structural_design_patterns.proxy import VideoProvider, GetVideoProxy
 
 
 class TestProxy(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from .strategy import ExampleApplication
+from behavioral_design_patterns.strategy import ExampleApplication
 
 
 class TestStrategy(unittest.TestCase):

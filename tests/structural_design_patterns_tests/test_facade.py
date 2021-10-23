@@ -1,5 +1,5 @@
 import unittest
-from .facade import MathFacade
+from structural_design_patterns.facade import MathFacade
 
 
 class TestFacade(unittest.TestCase):

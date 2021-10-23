@@ -1,5 +1,5 @@
 import unittest
-from .adapter import RoundHole, RoundPeg, SquarePegAdapter, SquarePeg
+from structural_design_patterns.adapter import RoundHole, RoundPeg, SquarePegAdapter, SquarePeg
 
 
 class TestAdapter(unittest.TestCase):

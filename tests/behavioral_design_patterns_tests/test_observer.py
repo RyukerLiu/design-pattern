@@ -1,5 +1,5 @@
 import unittest
-import observer
+from behavioral_design_patterns.observer import Editor, ScreenListener, LoggingListener
 
 
 class TestObserver(unittest.TestCase):
@@ -10,9 +10,9 @@ class TestObserver(unittest.TestCase):
         log_listener = LoggingListener(editor.event_manager)
 
         editor.open_file('Test')
-        self.assertEqual(screen_listener.screen, 'Test')
-        self.assertEqual(log_listener.log, 'Test')
+        self.assertEqual(screen_listener.screen, 'open Test')
+        self.assertEqual(log_listener.log, 'open Test')
 
         editor.save_file('Test2')
-        self.assertEqual(screen_listener.screen, 'Test')
-        self.assertEqual(log_listener.log, 'Test2')
+        self.assertEqual(screen_listener.screen, 'save Test2')
+        self.assertEqual(log_listener.log, 'save Test2')

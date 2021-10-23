@@ -1,5 +1,5 @@
 import unittest
-from .mediator import Dialog
+from behavioral_design_patterns.mediator import Dialog
 
 
 class TestMediator(unittest.TestCase):

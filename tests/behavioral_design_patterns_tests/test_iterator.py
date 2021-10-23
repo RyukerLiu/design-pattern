@@ -1,5 +1,5 @@
 import unittest
-from .iterator import List
+from behavioral_design_patterns.iterator import List
 
 
 class TestIterator(unittest.TestCase):

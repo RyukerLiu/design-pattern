@@ -1,5 +1,5 @@
 import unittest
-from .bridge import RemoteControl, AdvancedRemoteControl, Radio, Tv
+from structural_design_patterns.bridge import RemoteControl, AdvancedRemoteControl, Radio, Tv
 
 
 class TestBridge(unittest.TestCase):
