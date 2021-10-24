@@ -1,50 +1,50 @@
-class EditorCommand:
-    app = None
-    editor = None
-    backup = None
+class Command:
+    def execute(self):
+        raise NotImplementedError
 
-    def __init__(self, app):
-        self.app = app
-        self.editor = self.app.editor
+    def undo(self):
+        raise NotImplementedError
+
+class EditorCommand(Command):
+    def __init__(self, editor):
+        self.editor = editor
+        self.backup = None
 
     def save_backup(self):
         self.backup = self.editor.text
 
     def undo(self):
-        self.editor.text = self.backup
+        if self.backup is not None:
+            self.editor.text = self.backup
 
     def execute(self):
+        self.save_backup()
+        self.action()
+    
+    def action(self):
         raise NotImplementedError
 
 
 class CopyCommand(EditorCommand):
-    def execute(self):
-        self.save_backup()
-        self.app.clipboard = self.editor.get_selection()
+    def action(self):
+        self.editor.clipboard = self.editor.get_selection()
 
 
 class CutCommand(EditorCommand):
-    def execute(self):
-        self.save_backup()
-        self.app.clipboard = self.editor.get_selection()
+    def action(self):
+        self.editor.clipboard = self.editor.get_selection()
         self.editor.delete_selection()
 
 
 class PasteCommand(EditorCommand):
-    def execute(self):
-        self.save_backup()
-        self.editor.replace_selection(self.app.clipboard)
-
-
-class UndoCommand(EditorCommand):
-    def execute(self):
-        self.save_backup()
-        self.app.undo()
+    def action(self):
+        self.editor.replace_selection(self.editor.clipboard)
 
 
 class Editor:
     def __init__(self, text):
         self.text = text
+        self.clipboard = ''
         self.selection = ''
 
     def get_selection(self):
@@ -62,7 +62,7 @@ class Editor:
 
 
 class Button:
-    def set_function(self, function):
+    def __init__(self, function):
         self.function = function
 
     def push(self):
@@ -71,7 +71,6 @@ class Button:
 
 class EditorApplication:
     def __init__(self):
-        self.clipboard = ''
         self.editor = Editor('')
         self.command_history = []
 
@@ -79,24 +78,18 @@ class EditorApplication:
 
     def __create_ui(self):
         def copy():
-            self.execute_command(CopyCommand(self))
-        self.copy_button = Button()
-        self.copy_button.set_function(copy)
+            self.execute_command(CopyCommand(self.editor))
+        self.copy_button = Button(copy)
 
         def cut():
-            self.execute_command(CutCommand(self))
-        self.cut_button = Button()
-        self.cut_button.set_function(cut)
+            self.execute_command(CutCommand(self.editor))
+        self.cut_button = Button(cut)
 
         def paste():
-            self.execute_command(PasteCommand(self))
-        self.paste_button = Button()
-        self.paste_button.set_function(paste)
+            self.execute_command(PasteCommand(self.editor))
+        self.paste_button = Button(paste)
 
-        def undo():
-            self.execute_command(UndoCommand(self))
-        self.undo_button = Button()
-        self.undo_button.set_function(undo)
+        self.undo_button = Button(self.undo)
 
     def execute_command(self, command):
         command.execute()
