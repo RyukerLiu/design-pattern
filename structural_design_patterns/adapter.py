@@ -25,7 +25,7 @@ class SquarePeg:
         return self.width
 
 
-class SquarePegAdapter:
+class SquarePegAdapter(RoundPeg):
     '''
     In order to check if we can insert SquarePeg in a RoundHole
     '''
