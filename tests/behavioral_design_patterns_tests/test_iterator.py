@@ -23,3 +23,8 @@ class TestIterator(unittest.TestCase):
             elements.append(iter.get_next())
 
         self.assertEqual(elements, [3, 2, 1])
+
+    def test_list_pythonic_iterator(self):
+        elements = [ element for element in self.list]
+
+        self.assertEqual(elements, [1, 2, 3])

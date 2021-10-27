@@ -6,39 +6,51 @@ class Iterator:
         raise NotImplementedError
 
 
-class ForwardIterator(Iterator):
+class ListForwardIterator(Iterator):
     def __init__(self, collection):
         self.collection = collection
         self.index = 0
 
     def get_next(self):
-        if self.has_more():
-            element = self.collection[self.index]
-            self.index += 1
-            return element
+        element = self.collection[self.index]
+        self.index += 1
+        return element
 
     def has_more(self) -> bool:
         return self.index < len(self.collection)
 
 
-class Collection:
-    def create_iterator(self) -> Iterator:
-        raise NotImplementedError
-
-
-class BackwardIterator(Iterator):
+class ListBackwardIterator(Iterator):
     def __init__(self, collection):
         self.collection = collection
         self.index = len(self.collection) - 1
 
     def get_next(self):
-        if self.has_more():
-            element = self.collection[self.index]
-            self.index -= 1
-            return element
+        element = self.collection[self.index]
+        self.index -= 1
+        return element
 
     def has_more(self) -> bool:
         return self.index >= 0
+
+
+class PythonicIterator(Iterator):
+    def __init__(self, collection):
+        self.collection = collection
+        self.index = 0
+
+    def __next__(self):
+        try:
+            value = self.collection[self.index]
+            self.index += 1
+        except IndexError:
+            raise StopIteration()
+            
+        return value
+
+class Collection:
+    def create_iterator(self):
+        raise NotImplementedError
 
 
 class List(Collection):
@@ -52,7 +64,11 @@ class List(Collection):
         return self.list[key]
 
     def get_forward_iterator(self):
-        return ForwardIterator(self)
+        return ListForwardIterator(self)
 
     def get_backward_iterator(self):
-        return BackwardIterator(self)
+        return ListBackwardIterator(self)
+
+    def __iter__(self):
+        return PythonicIterator(self)
+
