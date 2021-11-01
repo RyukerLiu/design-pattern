@@ -13,7 +13,7 @@ class VideoProvider(GetVideo):
         return Video(name)
 
 
-class GetVideoProxy(GetVideo):
+class GetVideoCachedProxy(GetVideo):
     cached = {}
 
     def __init__(self, provider):

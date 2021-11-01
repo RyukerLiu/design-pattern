@@ -1,5 +1,5 @@
 import unittest
-from structural_design_patterns.proxy import VideoProvider, GetVideoProxy
+from structural_design_patterns.proxy import VideoProvider, GetVideoCachedProxy
 
 
 class TestProxy(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestProxy(unittest.TestCase):
 
     def test_get_video_proxy(self):
         provider = VideoProvider()
-        proxy = GetVideoProxy(provider)
+        proxy = GetVideoCachedProxy(provider)
         video = proxy.get_video('x')
         self.assertEqual(video.name, 'x')
 
